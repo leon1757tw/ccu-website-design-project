@@ -21,8 +21,8 @@
     ```
     /www/team08
     ```
-* 有問題都直接講
-* 大家加油!!!
+* **有問題都直接講**
+* **大家加油!**
 
 
 ## Schedule
@@ -61,36 +61,36 @@
 ### Function
 * #### Account Manage
     ```
-      1. Login
-      2. Registered
+    1. Login
+    2. Registered
     ```
 
 * #### Message Board
     ```
-      1. Admin 
-      2. Client
+    1. Admin 
+    2. Client
     ```
 
 * #### Admin
     ```
-      1. Ticket
-        1) Add (insert)
-        2) Modified (update)
-        3) Delete (delete)
-        4) View (select)
+    1. Ticket
+      1) Add (insert)
+      2) Modified (update)
+      3) Delete (delete)
+      4) View (select)  
     ```
 
 * #### Client 
     ```
-      1. Shopping Cart
-        1) Add (insert)
-        2) Modified (update)
-        3) Delete (delete)
-        4) View (select)
+    1. Shopping Cart
+      1) Add (insert)
+      2) Modified (update)
+      3) Delete (delete)
+      4) View (select)
 
-      2. User Info
-        1) Order
-        2) Modified password
+    2. User Info
+      1) Order
+      2) Modified password
     ``` 
 
 ### SQL
