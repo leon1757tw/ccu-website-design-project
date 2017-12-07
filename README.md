@@ -3,7 +3,7 @@
 * [Reminds](#reminds)
 * [Schedule](#schedule)
   + [Date](#date)
-  + [12-07](#12-07)
+  + [Meeting](#meeting)
 * [Info](#info)
 * [Front-End](#front-end)
 * [Back-End](#back-end)
@@ -15,12 +15,17 @@
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'></a></i></small>
 
 ## Reminds
+* **大家有什麼想要大家注意的都可以加在這**
+
 * 寫清楚git commit做了啥 別當心情留言板用
 * 變數命名 摁...
 * 不要改裡面的東西 (要改可以去改別組的XD)
     ```
     /www/team08
     ```
+* ...
+* ...
+
 * **有問題都直接講**
 * **大家加油!**
 
@@ -33,8 +38,39 @@
 | Project Present  | 01/08 |
 | Project Report   | 01/15 |
 
-### 12-07
-> do what?
+### Meeting
+#### 12/07
+* 專案介紹 
+```
+售票網頁 以展覽,演唱會為主(可參考 accupass, kktix)
+```
+
+* 分工
+```
+前端 
+  - 廖張安
+  - 謝宜紘
+  - 王郁雅 
+後端 
+  - 陳志嘉
+  - 林鎰鋒
+```
+
+* git教學
+
+* 資料表設計
+
+* 固定開會時間
+```
+時間：每周一 21:30
+地點：劍橋 裕農路20號 
+```
+
+* 回家作業(Due 12/11)
+```
+前端：基礎介面(paint)
+後端：資料庫資料表, project proposal(Due 12/11)
+```
 
 
 ## Info
