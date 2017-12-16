@@ -1,5 +1,4 @@
-<?PHP
-
+<?php
 require_once("../config/config.php");
 
 class DBController{
