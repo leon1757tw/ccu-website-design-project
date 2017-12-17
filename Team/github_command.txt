@@ -1,0 +1,16 @@
+這是後端的
+git status 查看現在狀態
+git add 紅色:修改&我要上傳的東西
+git commit 加上註解&把#刪掉
+git log 查看版本紀錄
+git checkout 看自己在哪(要在develop上)
+git checkout develop 沒的話就要打這個
+git push origin develop 最後的動作
+git pull 更新我本地端的資料
+前端指令跟上面差不多
+但是不能全打一樣
+有問題要問
+因為這是寫給我自己看的
+
+
+ㄎㄎ
