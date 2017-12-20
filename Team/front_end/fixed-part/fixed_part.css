@@ -1,0 +1,117 @@
+/*----------------------------------------header-styles---------------------------------------*/
+#header {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+#header div {
+	margin: 0 auto;
+    max-width: 940px;
+    min-height: 227px;
+    padding: 0 10px;
+}
+#header div a.logo {
+	display: block;
+    float: left;
+    height: 106px;
+    margin: 44px 0 0;
+    padding: 0;
+    width: 320px;
+}
+#header div a.logo img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+#header div ul {
+	display: block;
+    float: right;
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width: 501px;
+    padding: 102px 0 20px;
+    text-align: center;
+}
+#header div ul li {
+	display: inline-block;
+	margin: 0 0 0 37px;
+	padding: 0;
+    width: auto;
+}
+#header div ul li a {
+	color: #000000;
+	font-family: "Arial Black";
+	font-size: 19px;
+	font-weight: bolder;
+	line-height: 19px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+}
+#header div ul li a:hover {
+	color: #16ab88;
+}
+/*----------------------------------------footer-styles---------------------------------------*/
+#footer {
+	background-color: #111111;
+	margin: 0;
+	min-height: 122px;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	max-width: 940px;
+	overflow: hidden;
+	padding: 47px 10px 42px;
+}
+#footer div p {
+	color: #FFFFFF;
+	float: right;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 5px 0 0;
+	text-align: left;
+	text-transform: none;
+	width: 400px;
+}
+/*
+#footer div .connect {
+	display: block;
+	float: right;
+	height: 32px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 154px;
+}
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: left;
+	height: 28px;
+	margin: 0 7px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 28px;
+}
+#footer div .connect a.facebook {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -30px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -60px;
+	margin: 0;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -90px;
+} */
