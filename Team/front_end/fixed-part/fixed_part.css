@@ -1,37 +1,48 @@
 /*----------------------------------------header-styles---------------------------------------*/
+body{
+    margin: 0;
+}
 #header {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	width: 100%;
+    width: 100%;
+    background-image: url("./fixed_part_photo/header1.jpg");
+    background-size: 100% 100%;
 }
 #header div {
-	margin: 0 auto;
+	margin: 0 0 0 450px;
     max-width: 940px;
-    min-height: 227px;
+    min-height: 250px;
     padding: 0 10px;
 }
-#header div a.logo {
+/* #header div a.logo {
 	display: block;
     float: left;
     height: 106px;
     margin: 44px 0 0;
     padding: 0;
     width: 320px;
+} */
+#navigation{
+    margin-right: 0;
 }
-#header div a.logo img {
+/* #head_photo{
+    opacity: 0.5;
+} */
+/* #header div a.logo img {
 	display: block;
 	margin: 0;
 	padding: 0;
 	width: auto;
-}
+} */
 #header div ul {
 	display: block;
     float: right;
     list-style: none outside none;
     margin: 0 auto;
     max-width: 501px;
-    padding: 102px 0 20px;
+    padding: 180px 0 20px 40px;
     text-align: center;
 }
 #header div ul li {
@@ -41,7 +52,7 @@
     width: auto;
 }
 #header div ul li a {
-	color: #000000;
+	color: whitesmoke;
 	font-family: "Arial Black";
 	font-size: 19px;
 	font-weight: bolder;
