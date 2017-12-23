@@ -7,7 +7,7 @@ body{
 	padding: 0;
 	position: relative;
     width: 100%;
-    background-image: url("./fixed_part_photo/header.jpg");
+    background-image: url("./photo/header.jpg");
     background-size: 100% 100%;
 }
 #header div {
@@ -49,6 +49,36 @@ body{
 }
 #header div ul li a:hover {
 	color: #098CD8;
+}
+/*----------------------------------------login-styles---------------------------------------*/
+#log_container{
+    height: 60px;
+    background-color: #7D858A
+}
+#login{
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-family: serif;
+}
+/*----------------------------------------search-styles---------------------------------------*/
+#search{
+    height: 40px;
+    background-color: green;
+}
+/*----------------------------------------ticket-styles---------------------------------------*/
+#ticket{
+    height: 800px;
+    background-color: #965959
+}
+/*----------------------------------------latest information---------------------------------------*/
+#latest_data{
+    height: 400px;
+    background-color: #A36A3C
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
