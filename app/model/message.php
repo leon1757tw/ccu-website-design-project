@@ -1,14 +1,13 @@
 <?php
 require_once("./database.php");
 
-$date = new DateTime();
+$time = date();
+/*
 $date->setTimezone(new DateTimeZone("Asia/Taipei"));
 $createDate = $date->format("Y-m-d H:i:s");
 
 $message = new MessageManage();
-
-
-
+*/
 class MessageManage{
 
     private $db;
