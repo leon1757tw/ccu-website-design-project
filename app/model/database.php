@@ -27,6 +27,16 @@ class DBController{
         }
     }
 
+    public function executeDB_selc($sql){
+        try{
+            
+            $result = $this->conn->query($sql);
+            return $result;
+        }catch (PDOException $e){
+            echo "GG" . $e->getMessage();
+        }
+    }
+
     public function queryDB($sql, $arr){
         try{
             $stmt = $this->conn->prepare($sql);
