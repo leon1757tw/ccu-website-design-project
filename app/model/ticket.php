@@ -32,6 +32,19 @@ class Ticket
         return $result;
 	}
 
+	public function takeTicket(){
+		$result = $this->db->executeDB_selc("SELECT * FROM ticket");
+		$row = $result->fetchAll(PDO::FETCH_ASSOC);
+		return $row;
+		//$row = $result->fetchAll();
+		/*while(){
+			print_r($row);
+		}*/
+		/*foreach ($row as $key => $value) {
+			echo "$key: $value<br>";
+		}*/
+		//print_r ($row = $result->fetchAll());
+	}
 	
 }
 
