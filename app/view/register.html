@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="register.css" type="text/css">
+</head>
+
+<body>
+	<div>
+		申請會員*為必填
+		<form action="../controllers/register.php" method="post"><!--資料正確連結register_success.html-->
+			*會員帳號 : <input type="text" name="username" required><br><!--已存在顯示"此帳號已存在"-->
+			*密碼 : <input type="password" name="password" required><br>
+			*密碼確認 : <input type="password" name="passwordCheck" required><br><!--錯誤顯示"密碼確認錯誤 請重新輸入"-->
+			<!--*會員姓名 : <input type="text" name="name" required><br>-->
+			性別 : <input type="radio" name="gender">男<input type="radio" name="gender">女<br>
+			出生年月日 : <input type="date"><br>
+			*連絡電話 : <input type="text" name="phone" required><br>
+			*電子信箱 : <input type="text" name="email" required><br>
+			<input type="submit" value="確認送出">
+		</form>
+	</div>			
+</body>
+</html>
+
+

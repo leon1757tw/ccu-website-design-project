@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="login.css" type="text/css">
+</head>
+
+<body>	
+	<div>
+		<div>
+			會員登入
+			<input type="button" value="我要註冊" onclick="location.href='register.html'">
+		</div>
+		<div>
+			<form action="../controllers/login.php" method="post">
+				帳號 : <input type="text" name="username"><br>
+				密碼 : <input type="text" name="password"><br>
+				<input type="submit" value="登入">
+				<!--登入成功連接home.html 登入錯誤顯示"帳號密碼錯誤 請重新輸入"-->
+			</form>		
+		</div>	
+	</div>
+		
+</body>
+</html>
+
