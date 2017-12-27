@@ -1,15 +1,7 @@
 <?php
 require_once("./database.php");
 
-$time = date();
-/*
-$date->setTimezone(new DateTimeZone("Asia/Taipei"));
-$createDate = $date->format("Y-m-d H:i:s");
-
-$message = new MessageManage();
-*/
-class MessageManage{
-
+class Message{
     private $db;
 
     public function __construct(){
@@ -22,12 +14,13 @@ class MessageManage{
         return $result;
     }
 
-    public function add($ticketId, $createUser, $createDate, $message){
-       // $date = new DateTime();
-        //$date->setTimezone(new DateTimeZone("Asia/Taipei"));
+    public function addMessage($ticketId, $createUser, $messageContent){
+        $date = new DateTime();
+        $date->setTimezone(new DateTimeZone("Asia/Taipei"));
+        $createDate = $date->format("Y-m-d H:i:s");
 
-        $result = $this->db->executeDB("INSERT INTO message VALUES (?, ?, ?, ?)",
-                                        array($ticketId, $createUser, $createDate, $message));
+        $result = $this->db->executeDB("INSERT INTO message VALUES (?, ?, ?, ?, ?)",
+                                        array(NULL, $ticketId, $createUser, $createDate, $messageContent));
         return $result;
     }
 }

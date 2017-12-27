@@ -26,31 +26,25 @@ class Cart
 	
 	public function getTotalItem(){
 		$total = 0;
-		foreach ($this->items as $items) {
-			foreach ($items as $item) {
-				++$total;
-			}
+		foreach ($this->items as $item) {
+			++$total;
 		}
 		return $total;
 	}
 	
 	public function getTotalQuantity(){
 		$quantity = 0;
-		foreach ($this->items as $items) {
-			foreach ($items as $item) {
-				$quantity += $item['quantity'];
-			}
+		foreach ($this->items as $item) {
+			$quantity += $item['quantity'];
 		}
 		return $quantity;
 	}
 	
 	public function getTotalPrice(){
 		$total = 0;
-		foreach ($this->items as $items) {
-			foreach ($items as $item) {
-				if (isset($item['attributes']['price'])) {
-					$total += $item['attributes']['price'] * $item['quantity'];
-				}
+		foreach ($this->items as $item) {
+			if (isset($item['price'])) {
+				$total += $item['price'] * $item['quantity'];
 			}
 		}
 		return $total;
@@ -61,28 +55,16 @@ class Cart
 		$this->write();
 	}
 	
-	public function isItemExists($id, $attributes = []){
-		$attributes = (is_array($attributes)) ? array_filter($attributes) : [$attributes];
-		if (isset($this->items[$id])) {
-			$hash = md5(json_encode($attributes));
-			foreach ($this->items[$id] as $item) {
-				if ($item['hash'] == $hash) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
-	public function add($id, $quantity = 1, $price){
+	public function add($ticketId, $ticketName, $quantity = 1, $price){
 		$quantity = (preg_match('/^\d+$/', $quantity)) ? $quantity : 1;
-		if (isset($this->items[$id])) {
-            $this->items[$id]['quantity'] += $quantity;
-            $this->items[$id]['quantity'] = ($this->items[$id]['quantity'] > $this->itemMaxQuantity) ? $this->itemMaxQuantity : $this->items[$id]['quantity'];
+		if (isset($this->items[$ticketId])) {
+            $this->items[$ticketId]['quantity'] += $quantity;
+            $this->items[$ticketId]['quantity'] = ($this->items[$ticketId]['quantity'] > $this->itemMaxQuantity) ? $this->itemMaxQuantity : $this->items[$ticketId]['quantity'];
             $this->write();
             return true;	
         }
-		$this->items[$id] = [
+		$this->items[$ticketId] = [
+			'name' => $ticketName,
 			'quantity' => ($quantity > $this->itemMaxQuantity) ? $this->itemMaxQuantity : $quantity,
 			'price' => $price,
 		];
@@ -90,26 +72,26 @@ class Cart
 		return true;
 	}
 	
-	public function update($id, $quantity = 1, $price){
+	public function update($ticketId, $quantity = 1){
 		$quantity = (preg_match('/^\d+$/', $quantity)) ? $quantity : 1;
 		if ($quantity == 0) {
-			$this->remove($id);
+			$this->remove($ticketId);
 			return true;
 		}
-		if (isset($this->items[$id])) {
-            $this->items[$id]['quantity'] = $quantity;
-            $this->items[$id]['quantity'] = ($this->items[$id]['quantity'] > $this->itemMaxQuantity) ? $this->itemMaxQuantity : $this->items[$id]['quantity'];
+		if (isset($this->items[$ticketId])) {
+            $this->items[$ticketId]['quantity'] = $quantity;
+            $this->items[$ticketId]['quantity'] = ($this->items[$ticketId]['quantity'] > $this->itemMaxQuantity) ? $this->itemMaxQuantity : $this->items[$ticketId]['quantity'];
             $this->write();
             return true; 
 		}
 		return false;
 	}
 	
-	public function remove($id){
-		if (!isset($this->items[$id])) {
+	public function remove($ticketId){
+		if (!isset($this->items[$ticketId])) {
 			return false;
 		}
-		unset($this->items[$id]);
+		unset($this->items[$ticketId]);
 		$this->write();
 		return true;
 	}
@@ -127,3 +109,5 @@ class Cart
 		$_SESSION[$this->cartId] = json_encode(array_filter($this->items));
 	}
 }
+
+?>

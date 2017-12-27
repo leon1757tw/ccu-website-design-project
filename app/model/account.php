@@ -35,7 +35,7 @@ class Account{
 
     public function isUserExist($username){
         $result = $this->db->queryDB("SELECT * FROM account WHERE username = ?", 
-                                array($username));
+                                    array($username));
         if(!empty($result)){
             return true;
         } else {
@@ -47,6 +47,12 @@ class Account{
         $result = $this->db->executeDB("INSERT INTO account VALUES (?, ?, ?, ?)", 
                                         array($this->username, $this->password, $this->email, $this->phone));
         return $result;
+    }
+
+    public function modifiedPassword($username, $password){
+        $password = $this->encryptPassword($password);
+        $result = $this->db->executeDB("UPDATE account SET password = ? WHERE username = ?",
+                                        array($password, $username));
     }
 }
 
