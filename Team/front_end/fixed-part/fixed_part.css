@@ -1,36 +1,57 @@
 /*----------------------------------------header-styles---------------------------------------*/
+* {
+    box-sizing: border-box;
+}
 body{
-    margin: 0;
+	margin: 0;
+}
+#page{
+	height: 100%;
 }
 #header {
 	margin: 0;
 	padding: 0;
-	position: relative;
-    width: 100%;
-    background-image: url("./fixed_part_photo/header.jpg");
-    background-size: 100% 100%;
+	top:0;
+	position: fixed;
+	height: 60px;
+	width: 100%;
+	background-color: black;
 }
-#header div {
-	margin: 0 0 0 450px;
-    max-width: 940px;
-    min-height: 250px;
-    padding: 0 10px;
+#navigation{
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	padding: 0 10px;
 }
-/* #navigation{
-    margin-right: 0;
-} */
+#mark{
+	display:block;
+	height: 100%;
+	width: 140px;
+	float: left;
+	position: absolute;
+	left: 25%;
+}
+#user {
+	display:block;
+	height: 100%;
+	width: 100px;
+	padding: 10px;
+	position: absolute;
+	float: left;
+	left: 95%;
+}
 #header div ul {
 	display: block;
-    float: right;
-    list-style: none outside none;
-    margin: 0 auto;
-    max-width: 501px;
-    padding: 180px 0 20px 40px;
-    text-align: center;
+	margin:  auto;
+	padding-top: 18px;
+    /* width: 100%; */
+	text-align: center;
+	padding-left: 0px;
+	width: 50%;
 }
 #header div ul li {
 	display: inline-block;
-	margin: 0 0 0 37px;
+	margin: 0 15px 0 15px;
 	padding: 0;
     width: auto;
     font-weight: 900;
@@ -48,21 +69,30 @@ body{
 	width: auto;
 }
 #header div ul li a:hover {
-	color: #098CD8;
+	color: #D2A3DB;
+}
+/*-----------------insert your css here，don't forget to add"margin-top "size(60px) ，because the topbar is fixed---------------------*/
+
+#test{
+	height: 200px;
+}
+#menu{
+	height: 100%;
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	background-color: #111111;
 	margin: 0;
-	min-height: 122px;
+	min-height: 20%;
 	padding: 0;
 	width: 100%;
+	position: absolute;
+	margin-buttom:0px;
 }
 #footer div {
-	margin: 0 auto;
-	max-width: 940px;
+	max-width: 70%;
 	overflow: hidden;
-	padding: 47px 10px 42px;
+	padding: 40px;
 }
 #footer div p {
 	color: #FFFFFF;
@@ -71,9 +101,7 @@ body{
 	font-size: 15px;
 	font-weight: 600;
 	line-height: 15px;
-	margin: 0;
 	padding: 5px 0 0;
-	text-align: left;
 	text-transform: none;
 	width: 400px;
 }
