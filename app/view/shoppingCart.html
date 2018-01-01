@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../src/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../src/css/styles.css" rel="stylesheet">
+    <link href="../../src/css/cart.css" rel="stylesheet">    
+</head>
+
+<body>
+    <!--nav START-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">THEATER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mr-auto"></div>
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
+        </nav>
+    </header>
+    <!--nav END-->
+    
+    <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+    <main role="main">
+        <div class="container">
+            <div class="card shopping-cart">
+                <div class="card-body">
+                    <!-- PRODUCT -->
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-2 text-center">
+                            <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                        </div>
+                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                            <h4 class="product-name">
+                                <strong>Product Name</strong>
+                            </h4>
+                            <h4>
+                                <small>Product description</small>
+                            </h4>
+                        </div>
+                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                <h6>
+                                    <strong>25.00
+                                        <span class="text-muted">x</span>
+                                    </strong>
+                                </h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4">
+                                <div class="quantity">
+                                    <input type="button" value="+" class="plus">
+                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
+                                    <input type="button" value="-" class="minus">
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2 text-right">
+                                <button type="button" class="btn btn-outline-danger btn-xs">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- END PRODUCT -->
+                    <!-- PRODUCT -->
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-2 text-center">
+                            <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                        </div>
+                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                            <h4 class="product-name">
+                                <strong>Product Name</strong>
+                            </h4>
+                            <h4>
+                                <small>Product description</small>
+                            </h4>
+                        </div>
+                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                <h6>
+                                    <strong>25.00
+                                        <span class="text-muted">x</span>
+                                    </strong>
+                                </h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4">
+                                <div class="quantity">
+                                    <input type="button" value="+" class="plus">
+                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
+                                    <input type="button" value="-" class="minus">
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2 text-right">
+                                <button type="button" class="btn btn-outline-danger btn-xs">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- END PRODUCT -->
+                    <div class="pull-right">
+                        <a href="" class="btn btn-outline-secondary pull-right">
+                            Update shopping cart
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="pull-right" style="margin: 10px">
+                        <a href="" class="btn btn-success pull-right">Checkout</a>
+                        <div class="pull-right" style="margin: 5px">
+                            Total price:
+                            <b>50.00€</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER START -->
+        <footer class="container-fluid bg-dark">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <p>&copy; 2017 CCUMIS &middot;
+                        <a href="#">Contact Us</a>
+                    </p>
+                    <p class="float-right">
+                        <a href="#">Back to top ></a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../src/bootstrap/assets/js/vendor/popper.min.js"></script>
+    <script src="../../src/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+</body>
+
+</html>

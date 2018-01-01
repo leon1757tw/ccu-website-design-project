@@ -1,0 +1,171 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3.5rem;
+  color: #5a5a5a;
+}
+
+/*Login Modal, Register Modal
+-------------------------------------------------- */
+#registerModal {
+  overflow-y: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/*Flipped Card
+-------------------------------------------------- */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+  height: 400px;
+  margin-bottom: 4rem;
+  border-radius: 5px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff7a;
+  box-shadow:2px 2px 20px rgba(0,0,0,0.3)
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.card-img-overlay{
+  top:unset; 
+  color:#fff;
+  background: -moz-linear-gradient(top, rgba(26,96,111,0) 0%, rgba(26,96,111,0) 1%, rgba(24,87,104,0.91) 31%, rgba(21,65,89,0.91) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(26,96,111,0) 0%,rgba(26,96,111,0) 1%,rgba(24,87,104,0.91) 31%,rgba(21,65,89,0.91) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(26,96,111,0) 0%,rgba(26,96,111,0) 1%,rgba(24,87,104,0.91) 31%,rgba(21,65,89,0.91) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001a606f', endColorstr='#e8154159',GradientType=0 );
+}
+
+.card-title{
+  padding: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.card-info{
+  color: #666666;
+}
+
+.card-price{
+  color: #ff0000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* SHOPPING CART
+-------------------------------------------------- */
+.sqs-pill-shopping-cart {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 0.75 !important;
+  position: fixed;
+  top: 110px;
+  right: 20px;
+}
+
+/* FOOTER CSS
+-------------------------------------------------- */
+
+footer{
+  position: relative;
+  bottom:0;
+  color: #ffffff;
+  padding: 0.3em;
+}
+
+footer p {
+	font-size: 1rem;
+	margin: 0.25rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}

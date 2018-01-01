@@ -7,8 +7,8 @@ $user = Account::findByUsername($username);
 
 if($user->isUserExist($username)){
     if($user->verifyPassword($password)){
-        $_SESSION["user_logged_in"] = "yes";
-        $_SESSION["user_name"] = $username;
+        $_SESSION["isLogin"] = "yes";
+        $_SESSION["username"] = $username;
         echo "Login Success";
         header("Location:");
     }

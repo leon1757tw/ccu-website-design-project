@@ -49,10 +49,11 @@ class Account{
         return $result;
     }
 
-    public function modifiedPassword($username, $password){
-        $password = $this->encryptPassword($password);
+    public function modifiedPassword($newPassword){
+        $this->password = $this->encryptPassword($newPassword);
         $result = $this->db->executeDB("UPDATE account SET password = ? WHERE username = ?",
-                                        array($password, $username));
+                                        array($this->password, $this->username));
+        return $result;
     }
 }
 

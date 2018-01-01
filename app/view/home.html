@@ -13,12 +13,7 @@
 	<link href="../../src/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="../../src/css/carousel.css" rel="stylesheet">
-	<style>
-		#registerModal {
-			overflow-y: auto;
-		}
-	</style>
+	<link href="../../src/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,10 +32,10 @@
 				<div class="modal-body">
 					<form action="../../app/controllers/login.php" method="post" id="loginForm">
 						<div class="form-group">
-							<input type="text" name="username" class="form-control" placeholder="Username">
+							<input type="text" name="username" class="form-control" placeholder="Username" required>
 						</div>
 						<div class="form-group">
-							<input type="password" name="password" class="form-control" placeholder="Password">
+							<input type="password" name="password" class="form-control" placeholder="Password" required>
 						</div>
 						<a href="#registerModal" data-dismiss="modal" data-toggle="modal"> Sign up here ></a>
 					</form>
@@ -67,29 +62,40 @@
 
 				<div class="modal-body">
 					<form action="../../app/controllers/register.php" method="post" id="registerForm">
+						<div class="form-group form-row justify-content-center">
+							<label class="custom-control custom-radio">
+								<input id="userIdentity" name="identity" value="user" type="radio" class="custom-control-input" required>
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">User</span>
+							</label>
+							<label class="custom-control custom-radio">
+								<input id="adminIdentity" name="identity" value="admin" type="radio" class="custom-control-input" required>
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">Admin</span>
+							</label>
+						</div>
 						<div class="form-group">
 							<label for="username">Username</label>
-							<input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
+							<input type="text" name="username" id="username" class="form-control" placeholder="Please Type Username" required>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="password">Password</label>
-								<input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+								<input type="password" name="password" id="password" class="form-control" placeholder="Please Type Password" required>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="passwordcheck">Password</label>
-								<input type="password" name="passwordCheck" id="passwordcheck" class="form-control" placeholder="Password" required>
+								<input type="password" name="passwordCheck" id="passwordcheck" class="form-control" placeholder="Please Type Again" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="phone">Phone</label>
-							<input type="text" name="phone" id="phone" class="form-control" placeholder="Phone" required>
+							<input type="text" name="phone" id="phone" class="form-control" placeholder="Please Type Phone" required>
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" class="form-control" placeholder="Email" required>
+							<input type="text" name="email" id="email" class="form-control" placeholder="Please Type Email" required>
 						</div>
-
 					</form>
 				</div>
 
@@ -101,10 +107,9 @@
 	</div>
 	<!-- Register Modal -->
 
-
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<a class="navbar-brand" href="#">Carousel</a>
+			<a class="navbar-brand" href="#">THEATER</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -114,21 +119,6 @@
 				<div class="navbar-nav mr-auto"></div>
 				<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#loginModal">Login</button>
 			</div>
-
-			<!--
-			<div class="dropdown">
-				<button class="btn btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-				 aria-expanded="false">
-					leon1757tw
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">My Account</a>
-					<a class="dropdown-item" href="#">Order</a>
-					<a class="dropdown-item" href="#">Logout</a>
-				</div>
-			</div>
-		-->
-
 		</nav>
 	</header>
 
@@ -191,69 +181,114 @@
 			</a>
 		</div>
 
-
-		<!-- Marketing messaging and featurettes
-      ================================================== -->
-		<!-- Wrap the rest of the page in another container to center all the content. -->
-
-		<div class="container marketing">
-
-			<!-- Three columns of text below the carousel -->
-			<div class="row">
-				<div class="col-lg-4">
-					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image"
-					 width="140" height="140">
-					<h2>Heading</h2>
-					<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id
-						elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-					</p>
+		<div class="container">
+			<div class="row  justify-content-center">
+				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<!-- front content -->
+							<img class="card-img-top" src="https://cdn.images.express.co.uk/img/dynamic/36/590x/secondary/STAR-WARS-8-POSTER-1090884.jpg"
+							 alt="Card image cap">
+							<div class="card-img-overlay">
+								<h4>
+									<strong>
+										<!--<?php echo $ticketName?>-->Star Wars: Episode VIII - The Last Jedi </strong>
+								</h4>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card-body text-center">
+								<p class="card-title">Ticket Name</p>
+								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
+								<p class="card-price">$100</p>
+								<button type="button" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image"
-					 width="140" height="140">
-					<h2>Heading</h2>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur
-						purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-					</p>
+				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<img class="card-img-top" src="https://shyfyy.files.wordpress.com/2017/09/pitchperfect3-2.jpg" alt="Card image cap">
+							<div class="card-img-overlay">
+								<h4>
+									<strong>
+										<!--<?php echo $ticketName?>-->Pitch Perfect 3</strong>
+								</h4>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card-body text-center">
+								<p class="card-title">Ticket Name</p>
+								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
+								<p class="card-price">$100</p>
+								<button type="button" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image"
-					 width="140" height="140">
-					<h2>Heading</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod
-						semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-						risus.
-					</p>
-					<p>
-						<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-					</p>
+				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<div class="front">
+								<img class="card-img-top" src="https://movies.tw.campaign.yahoo.net/i/o/production/movies/November2017/ZxDuquO7HpwEdS5KalL7-2037x2906.jpg"
+								 alt="Card image cap">
+								<div class="card-img-overlay">
+									<h4>
+										<strong>
+											<!--<?php echo $ticketName?>-->The Greatest Showman</strong>
+									</h4>
+								</div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card-body text-center">
+								<p class="card-title">Ticket Name</p>
+								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
+								<p class="card-price">$100</p>
+								<button type="button" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- /.col-lg-4 -->
+				<!--
+				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							
+						</div>
+						<div class="back">
+							
+						</div>
+					</div>
+				</div>
+				-->
 			</div>
-			<!-- /.row -->
-
-
-
-
 		</div>
 		<!-- /.container -->
 
+		<div class="">
+			<button type="button" class="btn btn-info sqs-pill-shopping-cart">
+				<img src="../../src/img/cd-cart.svg" alt=""> 
+				<span class="badge badge-light">4</span>
+			</button>
+		</div>
 
 		<!-- FOOTER -->
-		<footer class="container">
-			<p class="float-right">
-				<a href="#">Back to top</a>
-			</p>
-			<p>&copy; 2017 Company, Inc. &middot;
-				<a href="#">Privacy</a> &middot;
-				<a href="#">Terms</a>
-			</p>
+		<footer class="container-fluid bg-dark">
+			<div class="container">
+				<div class="row justify-content-between">
+					<p>&copy; 2017 CCUMIS &middot;
+						<a href="#">Contact Us</a>
+					</p>
+					<p class="float-right">
+						<a href="#">Back to top ></a>
+					</p>
+				</div>
+			</div>
 		</footer>
 
 	</main>
