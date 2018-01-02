@@ -10,7 +10,7 @@ if($user->isUserExist($username)){
         $_SESSION["isLogin"] = "yes";
         $_SESSION["username"] = $username;
         echo "Login Success";
-        header("Location:");
+        header("Location: ./../view/index.php");
     }
     else{
         echo "Invalid Password";

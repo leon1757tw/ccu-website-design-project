@@ -12,7 +12,7 @@ if(!$user->isUserExist($username)){
         $user->phone = $phone;
         if($user->createAccount()){
             echo("Account Create Success!");
-            header("Location:");
+            header("Location: ./../view/index.php");
         } 
         else{
             echo("Request Error! Please Try Again");

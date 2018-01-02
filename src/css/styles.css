@@ -2,10 +2,29 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
+  margin-bottom: 3rem; /* Margin bottom by footer height */
   padding-top: 3.5rem;
   color: #5a5a5a;
 }
+
+
+/*Navbar
+-------------------------------------------------- */
+.cart-icon{
+  width: 1.5rem;
+}
+
+.badge-pill{
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
+}
+
 
 /*Login Modal, Register Modal
 -------------------------------------------------- */
@@ -43,7 +62,6 @@ body {
 
 /*Flipped Card
 -------------------------------------------------- */
-
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
@@ -56,7 +74,7 @@ body {
 .flip-container, .front, .back {
 	width: 320px;
   height: 400px;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   border-radius: 5px;
 }
 
@@ -64,7 +82,6 @@ body {
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
@@ -87,7 +104,6 @@ body {
 /* front pane, placed above back */
 .front {
 	z-index: 2;
-	/* for firefox 31 */
 	transform: rotateY(0deg);
 }
 
@@ -132,19 +148,51 @@ body {
   right: 20px;
 }
 
+/* MEMBER CENTER
+-------------------------------------------------- */
+.member {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.member h1{
+  font-size: 1.75rem;
+  padding: 1rem 0rem 0rem 3rem;
+}
+
+.member button{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
+}
+
+.member-item{
+  padding: 0rem 3rem 0rem 3rem;
+  margin-bottom: 1rem;
+}
+
+
+/* ORDER
+-------------------------------------------------- */
+.order-item{
+  border: 1px solid #343a40
+}
+
 /* FOOTER CSS
 -------------------------------------------------- */
-
-footer{
-  position: relative;
-  bottom:0;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem; /* Set the fixed height of the footer here */
+  line-height: 3rem; /* Vertically center the text there */
+  background-color: #f5f5f5;
   color: #ffffff;
-  padding: 0.3em;
 }
 
 footer p {
 	font-size: 1rem;
-	margin: 0.25rem;
+	margin-bottom: 0rem;
 }
 
 
