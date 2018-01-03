@@ -13,7 +13,6 @@ body {
   color: #5a5a5a;
 }
 
-
 /*Navbar
 -------------------------------------------------- */
 .cart-icon{
@@ -30,6 +29,15 @@ body {
 -------------------------------------------------- */
 #registerModal {
   overflow-y: auto;
+}
+
+
+/*Button Customize
+-------------------------------------------------- */
+.btn-more{
+  width:10rem; 
+  margin-bottom:2rem; 
+  padding:0.5rem 0rem;
 }
 
 

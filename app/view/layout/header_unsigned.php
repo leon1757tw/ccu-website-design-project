@@ -41,7 +41,7 @@
 			</div>
 
 			<div class="modal-body">
-				<form action="../../app/controllers/register.php" method="post" id="registerForm">
+				<form action="./../../app/controllers/register.php" method="post" id="registerForm">
 					<div class="form-group form-row justify-content-center">
 						<label class="custom-control custom-radio">
 							<input id="userIdentity" name="identity" value="user" type="radio" class="custom-control-input" required>

@@ -9,6 +9,11 @@ if($user->isUserExist($username)){
     if($user->verifyPassword($password)){
         $_SESSION["isLogin"] = "yes";
         $_SESSION["username"] = $username;
+        if($user->privilege == 5){
+            $_SESSION["identity"] = "user";
+        }else if($user->privilege == 10){
+            $_SESSION["identity"] = "admin";
+        }
         echo "Login Success";
         header("Location: ./../view/index.php");
     }

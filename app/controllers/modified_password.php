@@ -6,10 +6,10 @@ extract($_POST);
 $user = Account::findByUsername($_SESSION["username"]);
 
 if($user->verifyPassword($oldPassword)){
-    if($newPassword == $checkNewPassword){
+    if($newPassword == $newPasswordCheck){
         $user->modifiedPassword($newPassword);
         echo "Modified Password Success";
-        header("Location:");
+        header("Location: ./../view/member_center.php");
     }
     else{
         echo "Please Check Your New Password";

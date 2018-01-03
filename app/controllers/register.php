@@ -10,6 +10,7 @@ if(!$user->isUserExist($username)){
         $user->password = $user->encryptPassword($password);
         $user->email = $email;
         $user->phone = $phone;
+        $user->privilege = $user->setPrivilege($identity);
         if($user->createAccount()){
             echo("Account Create Success!");
             header("Location: ./../view/index.php");

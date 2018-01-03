@@ -22,8 +22,8 @@
                         <?php echo $_SESSION["username"];?> 
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="./account.php">My Account</a>
-                        <a class="dropdown-item" href="./account.php">Order</a>
+                        <a class="dropdown-item" href="./member_center.php">My Account</a>
+                        <a class="dropdown-item" href="./member_center.php">Order</a>
                         <a class="dropdown-item" href="../controllers/logout.php">Logout</a>
                     </div>
                 </li>

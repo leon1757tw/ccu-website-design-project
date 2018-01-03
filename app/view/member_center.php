@@ -1,5 +1,7 @@
 <?php
-	//require_once("./../controllers/auth.php");
+	require_once("./../controllers/auth.php");
+	require_once("./../controllers/data.php");
+
 	if($_SESSION["isLogin"] == "yes" && isset($_SESSION["username"])){
 		require_once("./layout/header_signed.php");
 	}
@@ -7,8 +9,10 @@
 		require_once("./layout/header_unsigned.php");
 	}
 	require_once("./layout/footer.php");
-?>
 
+	$data = new Data();
+	$account = $data->getAccountInfo($_SESSION["username"]);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,25 +53,25 @@
 					<div class="container member-item">
 						<div class="row justify-content-center">
 							<div class="col-lg-8">
-								<form action="" method="post" id=" ??? ">
+								<form action="./../controllers/modified_account_info.php" method="post" id="modifiedAccountInfo">
 									<fieldset disabled="disabled">
 										<div class="form-group">
-											<label for="username">Username</label>
-											<input type="text" name="username" id="username" class="form-control" value="<?php echo $_SESSION[" username "];?>" required>
+											<label for="username">帳號</label>
+											<input type="text" name="username" id="username" class="form-control" value="<?php echo $account["username"];?>" required>
 										</div>
 									</fieldset>
 									<div class="form-group">
-										<label for="phone">Phone</label>
-										<input type="text" name="phone" id="phone" class="form-control" value="<?php echo $_SESSION[" username "];?>" required>
+										<label for="phone">手機</label>
+										<input type="text" name="phone" id="phone" class="form-control" value="<?php echo $account["phone"];?>" required>
 									</div>
 									<div class="form-group">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" class="form-control" value="<?php echo $_SESSION[" username "];?>" required>
+										<label for="email">電子信箱</label>
+										<input type="text" name="email" id="email" class="form-control" value="<?php echo $account["email"];?>" required>
 									</div>
 								</form>
 								<div class="row justify-content-center">
 									<div col-4>
-										<button class="btn btn-info">確認修改</button>
+										<button class="btn btn-info" form="modifiedAccountInfo">確認修改</button>
 									</div>
 								</div>
 							</div>
@@ -80,23 +84,23 @@
 					<div class="container member-item">
 						<div class="row justify-content-center">
 							<div class="col-lg-8">
-								<form action="" method="post" id=" ??? ">
+								<form action="./../controllers/modified_password.php" method="post" id="modifiedPassword">
 									<div class="form-group">
-										<label for="password">* 目前密碼</label>
-										<input type="password" name="password" id="password" class="form-control" required>
+										<label for="oldPassword">目前密碼</label>
+										<input type="password" name="oldPassword" id="oldPassword" class="form-control" required>
 									</div>
 									<div class="form-group">
-										<label for="passwordcheck">* 新密碼</label>
-										<input type="password" name="passwordCheck" id="passwordcheck" class="form-control" required>
+										<label for="newPassword">新密碼</label>
+										<input type="password" name="newPassword" id="newPassword" class="form-control" required>
 									</div>
 									<div class="form-group">
-										<label for="passwordcheck">* 確認新密碼</label>
-										<input type="password" name="passwordCheck" id="passwordcheck" class="form-control" required>
+										<label for="newPasswordCheck">確認新密碼</label>
+										<input type="password" name="newPasswordCheck" id="newPasswordCheck" class="form-control" required>
 									</div>
 								</form>
 								<div class="row justify-content-center">
 									<div col-4>
-										<button class="btn btn-info">確認修改</button>
+										<button class="btn btn-info" form="modifiedPassword">確認修改</button>
 									</div>
 								</div>
 							</div>

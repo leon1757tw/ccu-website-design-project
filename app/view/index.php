@@ -1,4 +1,6 @@
 <?php
+	require_once("./../controllers/data.php");
+
 	session_start();
 	if($_SESSION["isLogin"] == "yes" && isset($_SESSION["username"])){
 		require_once("./layout/header_signed.php");
@@ -7,6 +9,8 @@
 		require_once("./layout/header_unsigned.php");
 	}
 	require_once("./layout/footer.php");
+
+	$data = new Data();
 ?>
 
 <!doctype html>
@@ -91,25 +95,52 @@
 			<div class="row">
 				<h1 class="col-lg-4">最新活動</h1>
 			</div>
-
 			<hr>
-
 			<div class="row justify-content-center">
+
+			<?php
+				$tickets = $data->getAllTickets();
+				for($count = 0; $count < 3; $count++):
+			?>
 				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
 					<div class="flipper">
 						<div class="front">
-							<!-- front content -->
+							<img class="card-img-top" src="https://shyfyy.files.wordpress.com/2017/09/pitchperfect3-2.jpg"
+							 alt="Card image cap">
+							<div class="card-img-overlay">
+								<h4>
+									<strong><?=$tickets[$count]["ticket_name"]?></strong>
+								</h4>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card-body text-center">
+								<p class="card-title"><?=$tickets[$count]["ticket_name"]?></p>
+								<p class="card-info"><?=$tickets[$count]["ticket_info"]?></p>
+								<p class="card-price">$<?=$tickets[$count]["ticket_price"]?></p>
+								<button type="button" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php
+				endfor;
+			?>
+
+			<!-- SAMPLE
+				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
 							<img class="card-img-top" src="https://cdn.images.express.co.uk/img/dynamic/36/590x/secondary/STAR-WARS-8-POSTER-1090884.jpg"
 							 alt="Card image cap">
 							<div class="card-img-overlay">
 								<h4>
-									<strong>
-										<!--<?php echo $ticketName?>-->Star Wars: Episode VIII - The Last Jedi </strong>
+									<strong>Star Wars: Episode VIII - The Last Jedi </strong>
 								</h4>
 							</div>
 						</div>
 						<div class="back">
-							<!-- back content -->
 							<div class="card-body text-center">
 								<p class="card-title">Ticket Name</p>
 								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
@@ -119,74 +150,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
-					<div class="flipper">
-						<div class="front">
-							<img class="card-img-top" src="https://shyfyy.files.wordpress.com/2017/09/pitchperfect3-2.jpg" alt="Card image cap">
-							<div class="card-img-overlay">
-								<h4>
-									<strong>
-										<!--<?php echo $ticketName?>-->Pitch Perfect 3</strong>
-								</h4>
-							</div>
-						</div>
-						<div class="back">
-							<!-- back content -->
-							<div class="card-body text-center">
-								<p class="card-title">Ticket Name</p>
-								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
-								<p class="card-price">$100</p>
-								<button type="button" class="btn btn-warning">Add to Cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
-					<div class="flipper">
-						<div class="front">
-							<div class="front">
-								<img class="card-img-top" src="https://movies.tw.campaign.yahoo.net/i/o/production/movies/November2017/ZxDuquO7HpwEdS5KalL7-2037x2906.jpg"
-								 alt="Card image cap">
-								<div class="card-img-overlay">
-									<h4>
-										<strong>
-											<!--<?php echo $ticketName?>-->The Greatest Showman</strong>
-									</h4>
-								</div>
-							</div>
-						</div>
-						<div class="back">
-							<!-- back content -->
-							<div class="card-body text-center">
-								<p class="card-title">Ticket Name</p>
-								<p class="card-info">Re newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength</p>
-								<p class="card-price">$100</p>
-								<button type="button" class="btn btn-warning">Add to Cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--
-				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
-					<div class="flipper">
-						<div class="front">
-							
-						</div>
-						<div class="back">
-							
-						</div>
-					</div>
-				</div>
-				-->
+			-->
 			</div>
 		</div>
 
 		<div class="container">
 			<div class="row justify-content-center">
-				<a href="./ticket.php" class="btn btn-outline-info" style="width:10rem; margin-bottom:2rem; padding:0.5rem 0rem;">
+				<a href="./ticket.php" class="btn btn-outline-info btn-more">
 					<b>M O R E</b>
 				</a>
-
 			</div>
 		</div>
 		<!-- /.container -->
