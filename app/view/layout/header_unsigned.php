@@ -97,7 +97,7 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a class="nav-link" href="./cart.php">
 						<img src="./../../src/img/cd-cart.svg" alt="Cart" class="cart-icon">
 						<div class="badge badge-pill badge-light">3</div>
 					</a>
