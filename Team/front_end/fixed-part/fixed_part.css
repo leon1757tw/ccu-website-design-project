@@ -29,7 +29,7 @@ body{
 	width: 140px;
 	float: left;
 	position: absolute;
-	left: 25%;
+	left: 20%;
 }
 #user {
 	display:block;
@@ -71,13 +71,12 @@ body{
 #header div ul li a:hover {
 	color: #D2A3DB;
 }
-/*-----------------insert your css here，don't forget to add"margin-top "size(60px) ，because the topbar is fixed---------------------*/
+/*-----------------把CSS加在這段，height跟width在自己改掉---------------------*/
 
-#test{
-	height: 200px;
-}
-#menu{
-	height: 100%;
+#body{
+	margin-top: 60px;
+	height: 500px;
+	width: 100%;
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
@@ -87,7 +86,7 @@ body{
 	padding: 0;
 	width: 100%;
 	position: absolute;
-	margin-buttom:0px;
+	margin-bottom:0px;
 }
 #footer div {
 	max-width: 70%;
