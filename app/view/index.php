@@ -183,9 +183,10 @@
 
 		<div class="container">
 			<div class="row justify-content-center">
-				<button class="btn btn-outline-info" style="width:10rem; margin-bottom:2rem; padding:0.5rem 0rem;">
+				<a href="./ticket.php" class="btn btn-outline-info" style="width:10rem; margin-bottom:2rem; padding:0.5rem 0rem;">
 					<b>M O R E</b>
-				</button>
+				</a>
+
 			</div>
 		</div>
 		<!-- /.container -->
