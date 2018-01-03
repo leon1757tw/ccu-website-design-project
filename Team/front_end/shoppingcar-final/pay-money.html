@@ -5,45 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>該付錢囉!!!</title>
-    <link rel=stylesheet type="text/css" href="pay-money.css">
+    <link rel=stylesheet type="text/css" href="combine.css">
 </head>
 <body>
-
-        <div id="header"> 
-                <div id="navigation">
-                        <!-- <img src="./fixed_part_photo/header.jpg" alt="hehe" id="head_photo"> -->
-                    <!-- <a href="#" class="logo"><img src="" alt="Logo"></a> -->
-                    <ul id="menu">
-                        <li class="selected">
-                            <a href="#" target="parent" style="text-decoration:none">會員專區</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">訂單查詢</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">我的購物車</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">馬上購票</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    <!-- login -->
-            <div id="log_container">
-                <span id="login">
-                    <a href="login.html" style="text-decoration:none">登入</a>
-                    <a href="register.html" style="text-decoration:none">註冊</a>
-                </span>
-            </div>
-    <!-- search -->
-            <div id="search">
-                <span id="searchbox">
-                    搜尋
-                </span>
-            </div>
-
-        <div class="notify"><b>買了那麼多東西也該來付錢了吧呵呵呵</b></div>
+        <div id="page">
+                <!-- here is header -->
+                        <div id="header">
+                            <div id="navigation">
+                                <div id="mark">
+                                    <a href="home.html"><img src="fixed_part_photo/mark.png" alt="mark"></a>
+                                </div>
+                                <div id="user">
+                                        <a href="login.html" >
+                                            <img src="fixed_part_photo/user.png" alt="user" width="35px">
+                                        </a>
+                                </div>
+                                <ul id="menu">
+                                    <li class="selected">
+                                        <a href="member.html" target="parent" style="text-decoration:none">會員專區</a>
+                                    </li>
+                                    <li>
+                                        <a href="search.html" target="parent" style="text-decoration:none">訂單查詢</a>
+                                    </li>
+                                    <li>
+                                        <a href="shopping-car.html" target="parent" style="text-decoration:none">我的購物車</a>
+                                    </li>
+                                    <li>
+                                        <a href="home.html" target="parent" style="text-decoration:none">馬上購票</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div id="body">
+        <div class="notify-pay-money"><b>買了那麼多東西也該來付錢了吧呵呵呵</b></div>
         <div class="payingcar">
           <div class="payingcar-name">訂單商品</div>
           <div class="payingcar-unitprice">單價</div>
@@ -51,46 +46,46 @@
           <div class="payingcar-total">總金額</div>
         </div>  
 
-        <div class="advice"> 
-          <div id="container1">
-              <div class="product-photo1"></div>  
-              <div class="product-name1">name</div>
-              <div class="product-unitprice1">131</div>
-              <div class="product-number1">1315</div>
-              <div class="product-total1">5554</div>
+        <div class="advice-pay-money"> 
+          <div id="container1-pay-money">
+              <div class="product-photo1-pay-money"></div>  
+              <div class="product-name1-pay-money">name</div>
+              <div class="product-unitprice1-pay-money">131</div>
+              <div class="product-number1-pay-money">1315</div>
+              <div class="product-total1-pay-money">5554</div>
           </div>
-          <div id="container2">
-                <div class="product-photo2"></div>  
-                <div class="product-name2">name</div>
-                <div class="product-unitprice2">131</div>
-                <div class="product-number2">1315</div>
-                <div class="product-total2">5554</div>
+          <div id="container2-pay-money">
+                <div class="product-photo2-pay-money"></div>  
+                <div class="product-name2-pay-money">name</div>
+                <div class="product-unitprice2-pay-money">131</div>
+                <div class="product-number2-pay-money">1315</div>
+                <div class="product-total2-pay-money">5554</div>
             </div>
-            <div id="container3">
-                    <div class="product-photo3"></div>  
-                    <div class="product-name3">name</div>
-                    <div class="product-unitprice3">131</div>
-                    <div class="product-number3">1315</div>
-                    <div class="product-total3">5554</div>
+            <div id="container3-pay-money">
+                    <div class="product-photo3-pay-money"></div>  
+                    <div class="product-name3-pay-money">name</div>
+                    <div class="product-unitprice3-pay-money">131</div>
+                    <div class="product-number3-pay-money">1315</div>
+                    <div class="product-total3-pay-money">5554</div>
                 </div>  
         </div>
 
-        <div class="ending">
+        <div class="ending-pay-money">
                 <button type="button" class="goback-button"><B>回上一頁</B></button>
-                <span class="total-money">確認總金額 : <i>總額</i></span>
+                <span class="total-money-pay-money">確認總金額 : <i>總額</i></span>
                 <button type="button" class="ok-button"><B>下訂單</B></button>
         </div>
-
+                        </div>
         <div id="footer">
                 <div>
                     <p>
                         地址:嘉義縣民雄鄉裕農路20號<br><br>
                         專線:0922-975-244/05-2277889<br><br>
-                        <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:tesla@ccu.edu.tw</a> <br><br>
+                        <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a> <br><br>
                         開放時間:每周一至五9:00AM-6:00PM 周末不開放
                     </p>
                 </div>
             </div>
-    
+        </div>
 </body>
 </html>

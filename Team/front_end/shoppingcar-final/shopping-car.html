@@ -1,113 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>購物der車車</title>
-    <link rel=stylesheet type="text/css" href="shopping-car.css">
+    <title>購物車</title>
+    <link rel=stylesheet type="text/css" href="combine.css">
 </head>
-<body>
 
-        <div id="header"> 
-                <div id="navigation">
-                        <!-- <img src="./fixed_part_photo/header.jpg" alt="hehe" id="head_photo"> -->
-                    <!-- <a href="#" class="logo"><img src="" alt="Logo"></a> -->
-                    <ul id="menu">
-                        <li class="selected">
-                            <a href="#" target="parent" style="text-decoration:none">會員專區</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">訂單查詢</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">我的購物車</a>
-                        </li>
-                        <li>
-                            <a href="#" target="parent" style="text-decoration:none">馬上購票</a>
-                        </li>
-                    </ul>
+<body>
+    <!-- <div id="page"> -->
+        <!-- here is header -->
+        <div id="header">
+            <div id="navigation">
+                <div id="mark">
+                    <a href="home.html">
+                        <img src="fixed_part_photo/mark.png" alt="mark">
+                    </a>
+                </div>
+                <div id="user">
+                    <a href="login.html">
+                        <img src="fixed_part_photo/user.png" alt="user" width="35px">
+                    </a>
+                </div>
+                <ul id="menu">
+                    <li class="selected">
+                        <a href="member.html" target="parent" style="text-decoration:none">會員專區</a>
+                    </li>
+                    <li>
+                        <a href="search.html" target="parent" style="text-decoration:none">訂單查詢</a>
+                    </li>
+                    <li>
+                        <a href="shopping-car.html" target="parent" style="text-decoration:none">我的購物車</a>
+                    </li>
+                    <li>
+                        <a href="home.html" target="parent" style="text-decoration:none">馬上購票</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="body">
+            <div class="notify-shopping-car">
+                <b>買賣一定有喜有悲 購買前請詳看商品區實際圖片</b>
+            </div>
+            <div class="shoppingcar">
+                <div class="shoppingcar-name">商品名稱</div>
+                <div class="shoppingcar-unitprice">單價</div>
+                <div class="shoppingcar-number">數量</div>
+                <div class="shoppingcar-total">總計</div>
+                <div class="shoppingcar-action">操作</div>
+            </div>
+
+            <div class="advice-shopping-car">
+                <div class="tell-us">可使用折扣代碼折抵消費喔喔喔!!!</div>
+                <div id="container1-shopping-car">
+                    <div class="product-photo1-shopping-car"></div>
+                    <div class="product-name1-shopping-car">name</div>
+                    <div class="product-unitprice1-shopping-car">111</div>
+                    <div class="product-number1-shopping-car">111</div>
+                    <div class="product-total1-shopping-car">111</div>
+                    <button type="button" class="product-action1-shopping-car">
+                        <b>刪除</b>
+                    </button>
+                </div>
+                <div id="container2-shopping-car">
+                    <div class="product-photo2-shopping-car"></div>
+                    <div class="product-name2-shopping-car">name</div>
+                    <div class="product-unitprice2-shopping-car">111</div>
+                    <div class="product-number2-shopping-car">111</div>
+                    <div class="product-total2-shopping-car">111</div>
+                    <button type="button" class="product-action2-shopping-car">
+                        <b>刪除</b>
+                    </button>
+                </div>
+                <div id="container3-shopping-car">
+                    <div class="product-photo3-shopping-car"></div>
+                    <div class="product-name3-shopping-car">name</div>
+                    <div class="product-unitprice3-shopping-car">111</div>
+                    <div class="product-number3-shopping-car">111</div>
+                    <div class="product-total3-shopping-car">111</div>
+                    <button type="button" class="product-action3-shopping-car">
+                        <b>刪除</b>
+                    </button>
                 </div>
             </div>
-    <!-- login -->
-            <div id="log_container">
-                <span id="login">
-                    <a href="login.html" style="text-decoration:none">登入</a>
-                    <a href="register.html" style="text-decoration:none">註冊</a>
-                </span>
+
+
+            <div class="discount">
+                <div class="fuckword">猜對就可以享有超優惠der折扣呦^^</div>
+                <span class="dis">折扣代碼 : </span>
+                <div class="complete">
+                    <form>
+                        <input type="text" class="form-control" placeholder="請您輸入~">
+                        <input type="reset" class="com-button" value="完成">
+                    </form>
+                </div>
             </div>
-    <!-- search -->
-            <div id="search">
-                <span id="searchbox">
-                    搜尋
+
+            <div class="ending-shopping-car">
+                <button type="button" class="keep-buy-button">
+                    <B>繼續購買</B>
+                </button>
+                <span class="total-money-shopping-car">坑爹總金額 :
+                    <i>總額</i>
                 </span>
+                <button type="button" class="go-pay-button">
+                    <B>該結帳囉</B>
+                </button>
             </div>
-
-    <div class="notify"><b>買賣一定有喜有悲 購買前請詳看商品區實際圖片</b></div>
-    <div class="shoppingcar">
-      <div class="shoppingcar-name">商品名稱</div>
-      <div class="shoppingcar-unitprice">單價</div>
-      <div class="shoppingcar-number">數量</div>
-      <div class="shoppingcar-total">總計</div>
-      <div class="shoppingcar-action">操作</div>
-    </div>
-
-    <div class="advice">
-        <div class="tell-us">可使用折扣代碼折抵消費喔喔喔!!!</div>
-        <div id="container1">
-        <div class="product-photo1"></div>
-            <div class="product-name1">name</div>
-            <div class="product-unitprice1">111</div>
-            <div class="product-number1">111</div>
-            <div class="product-total1">111</div>
-            <button type="button" class="product-action1"><b>刪除QQ</b></button>
         </div>
-        <div id="container2">
-            <div class="product-photo2"></div>
-                <div class="product-name2">name</div>
-                <div class="product-unitprice2">111</div>
-                <div class="product-number2">111</div>
-                <div class="product-total2">111</div>
-                <button type="button" class="product-action2"><b>刪除QQ</b></button>
-        </div> 
-        <div id="container3">
-                <div class="product-photo3"></div>
-                    <div class="product-name3">name</div>
-                    <div class="product-unitprice3">111</div>
-                    <div class="product-number3">111</div>
-                    <div class="product-total3">111</div>
-                    <button type="button" class="product-action3"><b>刪除QQ</b></button>
-            </div> 
-    </div>
 
-
-    <div class="discount">
-        <div class="fuckword">猜對就可以享有超優惠der折扣呦^^</div>
-        <span class="dis">折扣代碼 : </span>
-        <div class="complete">
-            <form>
-                <input type="text" class="form-control" placeholder="請您輸入~" >
-                <input type="reset" class="com-button" value="完成">
-            </form>     
-        </div>
-    </div>
-
-    <div class="ending">
-            <button type="button" class="keep-buy-button"><B>繼續購買</B></button>
-            <span class="total-money">坑爹總金額 : <i>總額</i></span>
-            <button type="button" class="go-pay-button"><B>該結帳囉</B></button>
-    </div>
-
-    <div id="footer">
-			<div>
-				<p>
-                    地址:嘉義縣民雄鄉裕農路20號<br><br>
-                    專線:0922-975-244/05-2277889<br><br>
-                    <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:tesla@ccu.edu.tw</a> <br><br>
-                    開放時間:每周一至五9:00AM-6:00PM 周末不開放
+        <div id="footer">
+            <div>
+                <p>
+                    地址:嘉義縣民雄鄉裕農路20號
+                    <br>
+                    <br> 專線:0922-975-244/05-2277889
+                    <br>
+                    <br>
+                    <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a>
+                    <br>
+                    <br> 開放時間:每周一至五9:00AM-6:00PM 周末不開放
                 </p>
-			</div>
-		</div>
+            </div>
+        </div>
+
+    <!-- </div> -->
 
 </body>
+
+
 </html>
