@@ -4,10 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>新增票種</title>
-	<link rel="stylesheet" href="combine.css" type="text/css">
+	<title>會員登入</title>
+    <link rel="stylesheet" href="data.css" type="text/css">
 </head>
 <body>
+	<!-- <div id="page"> -->
     <!-- here is header -->
             <div id="header">
                 <div id="navigation">
@@ -38,39 +39,40 @@
             </div>
        
     <!-- insert your html code here -->
-    
-    <div id = "body">
-    <div id="wrapper">
-		<div id = "title">
-			<b>新增票種</b><br>
-		</div>
-		<div id = "content">
-		<form action="" method="post" enctype="multipart/form-data"><!--連接此商品頁面-->
-			名稱 : <input class="form-control" type="text" name="name"><br>
-			日期 : <input class="form-control" type="text" name="date"><br>
-			票價 : <input class="form-control" type="text" name="price"><br>
-			介紹 : <textarea class="form-control" name="introduction" style="width:300px;height:120px;"></textarea><br><br>
-			新增圖片 : <input type="file" name="file"><br><br>
-			<button type="submit" class="btn"> 完成 </button>	
-		</form>
-		</div>
-    </div>
-    </div>
-    <br>
-   
-        <div id="test"></div>
+    <div id="box">
 
-     <!-- here is footer -->
-     <div id="footer">
-        <div>
-            <p>
-                地址:嘉義縣民雄鄉裕農路20號<br><br>
-                專線:0922-975-244/05-2277889<br><br>
-                <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a> <br><br>
-                開放時間:每周一至五9:00AM-6:00PM 周末不開放
-            </p>
+        <div id="wrapper">
+            <div id = "title">
+                <b>會員登入</b>
+                <input class = "register" type="button" value="我要註冊" onclick="location.href='register.html'">
+            </div>
+            <div id = "content">
+                
+                <form action="" method="post"><!--登入成功連接首頁 登入錯誤顯示"帳號密碼錯誤 請重新輸入"-->
+                    <div class="form-group">
+                    帳號 : <input class="form-control" type="text" name="account"><br>
+                    </div>
+                    <div class="form-group">
+                    密碼 : <input class="form-control" type="text" name="password"><br>
+                    </div>
+                    <button type="submit" class="btn"> 登入 </button>				
+                </form>
+            </div>
         </div>
+        <br>
     </div>
-
-</body>
+    
+         <!-- here is footer -->
+            <div id="footer">
+                <div>
+                    <p>
+                        地址:嘉義縣民雄鄉裕農路20號<br><br>
+                        專線:0922-975-244/05-2277889<br><br>
+                        <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a> <br><br>
+                        開放時間:每周一至五9:00AM-6:00PM 周末不開放
+                    </p>
+                </div>
+            </div>
+        <!-- </div> -->
+    </body>
 </html>

@@ -5,9 +5,9 @@
 body{
 	margin: 0;
 }
-#page{
+/* #page{
 	height: 100%;
-}
+} */
 #header {
 	margin: 0;
 	padding: 0;
@@ -29,7 +29,7 @@ body{
 	width: 140px;
 	float: left;
 	position: absolute;
-	left: 25%;
+	left: 20%;
 }
 #user {
 	display:block;
@@ -129,19 +129,25 @@ body{
 	overflow: hidden;
 	padding: 40px 0 0;
 	width: auto;
+	/* align-items: center; */
 }
 #body div ul li img {
 	display: block;
 	float: left;
-	margin: 0 28px 0 0;
+	margin: auto 28px auto 0;
 	padding: 0;
 	width: 320px;
 	height: 180px;
 }
+
+#body div ul li img:hover{
+	transform: scale(1.2);
+}
+
 #body div ul li div {
 	background: none;
 	float: right;
-	margin: 0;
+	margin: auto;
 	max-width: none;
 	overflow: hidden;
 	padding: 6px 0 0;
@@ -162,6 +168,18 @@ body{
 	text-transform: uppercase;
 	width: auto;
 }
+#body div ul li div h4{
+	color: white ;
+	line-height: 150%;
+	padding: 3px;
+}
+#body div ul li div h1:hover{
+	color: #114FC0;
+}
+#body div ul li div h4:hover{
+	color: #2F6EC0;
+}
+
 #body div ul li div p {
 	color: #FFFFFF;
 	font-family: Arial;
@@ -199,9 +217,12 @@ body{
 }
 #show_img{
 	width: 100%;
-	height:400px;
+	height:375px;
 	margin-top: 60px;
+	
+	
 }
+
 /* ----------------------------------carousel img------------------------------ */
 .carousel{
 	height: 100%;
@@ -217,7 +238,6 @@ body{
 .items .item {
 	  width: 100%;
 	  height: 100%;
-	  /* text-align: center; */
 	  position:absolute;
 	  top:0;
 	  left:0;
@@ -226,6 +246,11 @@ body{
 	  transition: transform 0.5s;
   }
   
+/* .items .item div {
+	  height: 100%;
+	  display: inline-block;
+	  position: relative;
+  } */
 .carousel .items .item.show {
     /*
       正在顯示的元素
@@ -281,7 +306,8 @@ body{
 }
 
 .carousel button#prev {
-    left: 0;
+	left: 0;
+	outline: none;
 }
 
 .carousel button#prev img{
@@ -289,8 +315,10 @@ body{
 }
 
 .carousel button#next {
-    right: 0;
+	right: 0;
+	outline: none;
 }  
+
 
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
@@ -300,7 +328,7 @@ body{
 	padding: 0;
 	width: 100%;
 	position: absolute;
-	margin-buttom:0px;
+	margin-bottom:0px;
 }
 #footer div {
 	max-width: 70%;

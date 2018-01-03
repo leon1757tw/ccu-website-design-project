@@ -4,9 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>會員專區</title>
-    <link rel="stylesheet" href="fixed_part.css" type="text/css">
-    <link rel="stylesheet" href="member.css" type="text/css">
+	<title>修改資料</title>
+	<link rel="stylesheet" href="data.css" type="text/css">
 </head>
 <body>
 	<div id="page">
@@ -40,34 +39,47 @@
             </div>
        
 	<!-- insert your html code here -->
+	<div id="mem_info">
 
-    <div id="sidebar_left">
-		<div class = "title">
-			<b>會員專區</b><br>
-		</div>
+		<div id="sidebar_left_info">
+			<div class = "title">
+				會員專區<br>
+			</div>
 			<br>
 			<a href = "member_information.html">修改資料</a><br>
 			<a href = "member_password.html">修改密碼</a><br>
-	</div>
-	<div id="content">
-		<div class = "title">
 		</div>
-    </div>
-    
-    <br>
+		<div id="content_info">
+			<div class = "title_info">
+			</div>
+			<div id = "information">
+				<form action="" method="post"><!--欄位會顯示註冊時資料-->
+				會員帳號 : <br><!--不可修改-->
+				會員姓名 : <input type="text" name="name"><br>
+				性別 : <br><!--不可修改-->
+				出生年月日 : <br><!--不可修改-->
+				連絡電話 : <input type="text" name="phone"><br>
+				電子信箱 : <input type="text" name="email"><br>
+				<input class="btn1" type="submit" value="修改">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<br>
         <div id="test"></div>
 
      <!-- here is footer -->
-     <div id="footer">
-        <div>
-            <p>
-                地址:嘉義縣民雄鄉裕農路20號<br><br>
-                專線:0922-975-244/05-2277889<br><br>
-                <a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a> <br><br>
-                開放時間:每周一至五9:00AM-6:00PM 周末不開放
-            </p>
-        </div>
-    </div>
+	 <div id="footer">
+		<div>
+			<p>
+				地址:嘉義縣民雄鄉裕農路20號<br><br>
+				專線:0922-975-244/05-2277889<br><br>
+				<a href="mailto:tesla@ccu.edu.tw" style="text-decoration:none">信箱:carshow@ccu.edu.tw</a> <br><br>
+				開放時間:每周一至五9:00AM-6:00PM 周末不開放
+			</p>
+		</div>
+	</div>
 </div>
 </body>
 </html>
