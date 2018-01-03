@@ -1,0 +1,360 @@
+/*----------------------------------------header CSS---------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
+#page{
+	height: 100%;
+}
+#header {
+	margin: 0;
+	padding: 0;
+	top:0;
+	position: fixed;
+	height: 60px;
+	width: 100%;
+	background-color: black;
+}
+#navigation{
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	padding: 0 10px;
+}
+#mark{
+	display:block;
+	height: 100%;
+	width: 140px;
+	float: left;
+	position: absolute;
+	left: 20%;
+}
+#user {
+	display:block;
+	height: 100%;
+	width: 100px;
+	padding: 10px;
+	position: absolute;
+	float: left;
+	left: 95%;
+}
+#header div ul {
+	display: block;
+	margin:  auto;
+	padding-top: 18px;
+    /* width: 100%; */
+	text-align: center;
+	padding-left: 0px;
+	width: 50%;
+}
+#header div ul li {
+	display: inline-block;
+	margin: 0 15px 0 15px;
+	padding: 0;
+    width: auto;
+    font-weight: 900;
+}
+#header div ul li a {
+	color: whitesmoke;
+	font-family: "Arial Black";
+	font-size: 19px;
+	font-weight: bolder;
+	line-height: 19px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+}
+#header div ul li a:hover {
+	color: #D2A3DB;
+}
+/*-----------------把CSS加在這段，height跟width在自己改掉---------------------*/
+
+/*-----------------add ticket & login CSS---------------------*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	}
+
+body{
+	background-color: beige;
+	font-family: Microsoft JhengHei;
+	}
+#box{
+	margin-top: 60px;
+	height: 500px;
+	padding-top: 60px;
+}
+#body{
+	margin-top: 60px;
+	height: 750px;
+	padding-top: 20px;
+}
+#wrapper {
+	width: 350px;
+	height: 400px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	}
+#wrapper2 {
+	width: 350px;
+	height: 92%;
+	border: 5px solid #ccc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+#title {
+	background-color: #ECECEC;
+	padding: 10px 15px;
+	
+}
+
+#content {
+	padding: 15px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+input.form-control{
+	display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	color: #555555;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+	.form-control_1{
+		width: 100%;
+		height:180px;
+		resize: none;
+		display: block;
+		font-size: 14px;
+		color: #555555;
+		background-color: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		border-radius: 4px;
+		padding: 5px;
+		overflow-x: scroll;
+		overflow-y: scroll;
+	}
+
+.btn{
+	display: block;
+	width: 100%;
+	color: #FFFFFF;
+	background-color: #B63D32;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 3px;
+	margin-top: 15px;
+	text-align: center;
+	}
+
+.register{
+	margin-left: 150px;
+	padding: 7px;
+}
+
+a1{
+	margin-left: 180px;
+}
+
+
+/*----------------------------------------member CSS---------------------------------------*/
+#member{
+	width: 100%;
+	height: 500px;
+}
+
+#sidebar_left{
+	background-color: #EEF3E8;
+	width:120px;
+	height:300px;
+	text-align:center;
+	line-height:50px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 320px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+	}
+
+.title {
+	background-color: #ECECEC;
+	padding: 10px 15px;
+	height: 65px;
+	}
+
+#content2{
+	float: right;
+	width:700px;
+	height:300px;
+	text-align:center;
+	line-height:50px;
+	margin-top: 100px;
+	margin-left: 435px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+}
+
+/*----------------------------------------member information CSS---------------------------------------*/
+#mem_info{
+	width: 100%;
+	height: 700px;
+	margin-top: 60px;
+}
+#sidebar_left_info{
+	background-color: #EEF3E8;
+	width:120px;
+	height:500px;
+	text-align:center;
+	line-height:50px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 320px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+	/* position: relative; */
+	}
+
+.title_info {
+	background-color: #ECECEC;
+	padding: 10px 15px;
+	height: 65px;
+	}
+
+#content_info{
+	float: right;
+	width:700px;
+	height:500px;
+	text-align:center;
+	line-height:50px;
+	margin-top: 100px;
+	margin-left: 435px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+	/* position: relative; */
+}
+
+.btn1{
+	width: 80px;
+	height: 30px;
+	font-size: 16px;
+}
+
+#information{
+	margin-left: -50px;
+}
+
+/*----------------------------------------member password CSS---------------------------------------*/
+#mem_pass{
+	margin-top:40px; 
+	width:100%;
+	height: 500px;
+}
+#sidebar_left_pass{
+	background-color: #EEF3E8;
+	width:120px;
+	height:350px;
+	text-align:center;
+	line-height:50px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 320px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+}
+
+.title_pass {
+	background-color: #ECECEC;
+	padding: 10px 15px;
+	height: 65px;
+}
+
+#content_pass{
+	float: right;
+	width:700px;
+	height:350px;
+	text-align:center;
+	line-height:50px;
+	margin-top: 100px;
+	margin-left: 435px;
+	border-radius: 3px;
+	border: 5px solid #ccc;
+	position: absolute;
+}
+
+.btn_pass{
+	width: 80px;
+	height: 30px;
+	font-size: 16px;
+}
+
+/*----------------------------------------register success CSS---------------------------------------*/
+
+#body_success{
+	margin-top:60px;
+	padding-top: 70px;
+	background-color: beige;
+	font-family: Microsoft JhengHei;
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	align-items: center;
+}
+
+#wrapper_success {	
+	width: 350px;
+	height: 95%;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+/*----------------------------------------footer CSS---------------------------------------*/
+#footer {
+	background-color: #111111;
+	margin: 0;
+	min-height: 20%;
+	padding: 0;
+	width: 100%;
+	/* position: relative; */
+	margin-bottom:0px;
+}
+#footer div {
+	max-width: 70%;
+	overflow: hidden;
+	padding: 40px;
+}
+#footer div p {
+	color: #FFFFFF;
+	float: right;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 15px;
+	padding: 5px 0 0;
+	text-transform: none;
+	width: 400px;
+}
