@@ -38,10 +38,10 @@
                     <div class="card-body">
 
                         <?php 
+                            require_once("./../controllers/cart_request.php");
                             foreach($items as $item_id => $item_attributes):
-                                $href = "./../controllers/cart_handler.php?action=upadate" .
-								"&ticket_id=" . $item_id . 
-								"&quantity=" . $item_attributes["quantity"];
+                                $request = new CartRequest("./../controllers/cart_handler.php");
+                                $deleteRequest = $request->deleteItem($item_id);
                         ?>
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-2 text-center">
@@ -61,14 +61,16 @@
                                             <h5>$ <?=$item_attributes["price"]?></h5>
                                         </div>
                                         <div class="col-3 col-md-3 text-left text-md-left">
-                                            <div class="input-group">
-                                                <input type="text" value="<?=$item_attributes["quantity"]?>" class="form-control">
-                                            </div>
+                                            <form action="./../controllers/cart_handler.php" method="GET">
+                                                <input type="text" name="quantity" value="<?=$item_attributes["quantity"]?>" onchange="this.form.submit()" class="form-control" >
+                                                <input type="hidden" name="action" value="update">
+                                                <input type="hidden" name="ticket_id" value="<?=$item_id?>">
+                                            </form>
                                         </div>
                                         <div class="col-2 col-md-2 text-left text-md-left">
-                                            <button type="submit" class="btn btn-outline-danger btn-xs">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
+                                            <a href="<?=$deleteRequest?>" class="btn btn-outline-danger btn-xs">
+                                                <strong>x</strong>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -76,14 +78,6 @@
                             <hr>
                             
                             <?php endforeach;?>
-                            
-                            <div class="container">
-                                <div class="row justify-content-end">
-                                    <a href="?action=update" class="btn btn-outline-warning cart-update">
-                                        更新
-                                    </a>
-                                </div>
-                            </div>
                     </div>
         
                     <div class="card-footer">

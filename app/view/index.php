@@ -99,14 +99,11 @@
 			<div class="row justify-content-center">
 
 			<?php
+				require_once("./../controllers/cart_request.php");
+				$request = new CartRequest("./../controllers/cart_handler.php");
 				$tickets = $data->getAllTickets();
 				for($count = 0; $count < 3; $count++):
-
-					$href = "./../controllers/cart_handler.php?action=add" .
-								"&ticket_id=" . $tickets[$count]["ticket_id"] . 
-								"&ticket_name=" . $tickets[$count]["ticket_name"] .
-								"&ticket_price=" . $tickets[$count]["ticket_price"];
-
+					$href = $request->addItem($tickets[$count]["ticket_id"], $tickets[$count]["ticket_name"], $tickets[$count]["ticket_price"]);
 			?>
 				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
 					<div class="flipper">
