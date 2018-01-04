@@ -1,5 +1,5 @@
 尚缺:
-1.register的CSS
+1.register的CSS		//OK
 2.member information要抓bug
 3.member.html小問題
 ---------------------------------------------------	
