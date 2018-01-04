@@ -69,14 +69,13 @@ body{
 	width: auto;
 }
 #header div ul li a:hover {
-	color: #D2A3DB;
+	color: rgb(254, 249, 255);
 }
 /*-----------------整合的部分---------------------*/
 
 #body{
 	margin-top: 60px;
-	/* height: 500px; */
-	/* width: 100%; */
+    background-color: rgb(254, 255, 249);
 }
 .notify-shopping-car{
     display: flex;
@@ -857,9 +856,6 @@ body{
     border-radius: 5px;
     background-color: orange;
     color: white;
-}
-.thanks-buy{
-    font-size: 150%;
 }
 .go-shoppingcar-button{
     height: 2.5rem;
