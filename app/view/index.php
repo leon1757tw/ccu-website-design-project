@@ -101,6 +101,12 @@
 			<?php
 				$tickets = $data->getAllTickets();
 				for($count = 0; $count < 3; $count++):
+
+					$href = "./../controllers/cart_handler.php?action=add" .
+								"&ticket_id=" . $tickets[$count]["ticket_id"] . 
+								"&ticket_name=" . $tickets[$count]["ticket_name"] .
+								"&ticket_price=" . $tickets[$count]["ticket_price"];
+
 			?>
 				<div class="col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
 					<div class="flipper">
@@ -119,7 +125,9 @@
 								<p class="card-title"><?=$tickets[$count]["ticket_name"]?></p>
 								<p class="card-info"><?=$tickets[$count]["ticket_info"]?></p>
 								<p class="card-price">$<?=$tickets[$count]["ticket_price"]?></p>
-								<button type="button" class="btn btn-warning">Add to Cart</button>
+								<a href="<?=$href?>" class="btn btn-warning">
+									Add to Cart
+								</a>
 							</div>
 						</div>
 					</div>
@@ -161,7 +169,6 @@
 				</a>
 			</div>
 		</div>
-		<!-- /.container -->
 	</main>
 
 	<!-- Bootstrap core JavaScript

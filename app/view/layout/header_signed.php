@@ -11,7 +11,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./cart.php">
                         <img src="./../../src/img/cd-cart.svg" alt="" style="width:1.5rem">
-                        <div class="badge badge-pill badge-light">3</div>
+                        <div class="badge badge-pill badge-light">
+                            <?php
+								require_once("./../controllers/data.php");
+								$data = new Data();
+								echo $data->getCartTotalItems();
+							?>
+                        </div>
                     </a>
                 </li>
             </ul>

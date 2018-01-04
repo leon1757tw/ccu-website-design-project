@@ -12,7 +12,7 @@ class Cart
 		if (!session_id()) {
 			session_start();
 		}
-		$this->cartId = md5((isset($_SERVER['HTTP_HOST'])) ? $_SERVER['HTTP_HOST'] : 'SimpleCart') . '_cart';
+		$this->cartId = md5((isset($_SESSION["username"])) ? $_SESSION["username"] : 'SimpleCart') . '_cart';
 		$this->read();
 	}
 	

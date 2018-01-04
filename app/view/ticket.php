@@ -50,7 +50,7 @@
                     foreach($tickets as $ticket):
                 ?>
                     <div class="col-lg-4">
-                        <a href="?<?=$ticket["ticket_id"]?>">
+                        <a href="?ticket_id=<?=$ticket["ticket_id"]?>">
                             <div class="card">
                                 <img class="card-img-top" src="https://movies.tw.campaign.yahoo.net/i/o/production/movies/November2017/ZxDuquO7HpwEdS5KalL7-2037x2906.jpg" alt="Card image cap">
                                 <div class="card-img-overlay">

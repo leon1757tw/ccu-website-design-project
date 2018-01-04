@@ -1,6 +1,7 @@
 <?php
 require_once("./../model/account.php");
 require_once("./../model/ticket.php");
+require_once("./../model/cart.php");
 
 class Data{
 
@@ -10,16 +11,29 @@ class Data{
 
     public function getAccountInfo($username){
         $user = Account::findByUsername($username);
-        $data = array("username" => $user->username,
+        return array("username" => $user->username,
                         "phone" => $user->phone,
                         "email" => $user->email);
-        return $data;
     }
 
     public function getAllTickets(){
         $tickets = new Ticket();
-        $data = $tickets->getAllTickets();
-        return $data;
+        return $tickets->getAllTickets();
+    }
+
+    public function getCartItems(){
+        $items = new Cart();
+        return $items->getItems();
+    }
+
+    public function getCartTotalPrice(){
+        $items = new Cart();
+        return $items->getTotalPrice();     
+    }
+
+    public function getCartTotalItems(){
+        $items = new Cart();
+        return $items->getTotalItem();
     }
 }
 ?>
