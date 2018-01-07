@@ -31,7 +31,7 @@
 	<main role="main">
 		<div class="container v-header">
     		<div class="fullscreen-video-wrap">  
-				<video id="home_video"controls muted autoplay="" loop="">
+				<video id="home_video" controls muted autoplay loop>
 					<source src="../src/video/homepage_video.mp4" type="video/mp4">
 					<script>
 						document.getElementById('home_video').addEventListener('loadedmetadata', function(){
