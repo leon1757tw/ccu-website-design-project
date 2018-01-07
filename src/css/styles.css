@@ -40,48 +40,74 @@ body {
   padding:0.5rem 0rem;
 }
 
-
-/* CUSTOMIZE THE CAROUSEL
+/*HomePage Video
 -------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+.v-header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: #777;
+.v-header .btn-more{
+  font-size: 1.15rem;
 }
-.carousel-item > img {
+
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-height:100%;
+  min-width:100%;
+}
+
+.header-overlay{
+  height:100vh;
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#eeeeee;
+  opacity:0.6;
 }
 
+.header-content{
+  z-index:2;
+}
+
+.header-content h1{
+  color: #5a5a5a;
+  font-size:3rem;
+  margin-bottom:0.5rem;
+}
+
+.header-content p{
+  color: #5a5a5a;
+  font-size:1.25rem;
+  padding-bottom:2rem;
+}
 
 /*Flipped Card
 -------------------------------------------------- */
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000px;
+  perspective: 1000px;
 }
 	/* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
-	transform: rotateY(180deg);
+  transform: rotateX(3deg);
 }
 
 .flip-container, .front, .back {
 	width: 320px;
-  height: 400px;
+  height: 200px;
   margin-bottom: 3rem;
   border-radius: 5px;
 }
@@ -96,7 +122,7 @@ body {
 /* hide back of pane during swap */
 .front, .back {
   width: 100%;
-  height: 400px;
+  height: 200px;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
    -moz-backface-visibility: hidden;
@@ -146,6 +172,51 @@ body {
   font-weight: 600;
 }
 
+/*------------------------------------------------ */
+.container-overlay {
+  position: relative;
+  box-shadow:2px 2px 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #5a5a5a;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity:0.6;
+  border-radius: 5px;
+}
+
+.container-overlay:hover .overlay {
+  height: 15%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 
 /* TICKET
 -------------------------------------------------- */
@@ -170,6 +241,116 @@ body {
   color: #ffc107;
 }
 
+/*TICKET INTRO
+-------------------------------------------------- */
+.ticket-intro .box {
+  background: #ccc;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+
+}
+
+.ticket-intro .box:after {
+  padding-top: 56.5%;
+  content: "";
+  display: block;
+}
+
+.ticket-intro .img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  margin: auto;
+}
+
+.ticket-intro{
+  padding:2rem;
+}
+
+.ticket-intro-main{
+  padding:1rem 1.5rem;
+}
+
+.ticket-intro-name{
+  margin:0rem 0.5rem;
+}
+
+.ticket-intro-name h1{
+  font-size:2rem;
+  font-weight: 600;
+  padding: 0rem 2rem;
+}
+
+.ticket-intro-info{
+  margin:0rem 1.5rem;
+  padding: 0rem 3rem;
+}
+
+.ticket-intro-sub{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ticket-intro-sub a{
+  font-size: 0.9rem
+}
+
+.ticket-intro-price{
+  color: #dc3545;
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+.ticket-intro-price p{
+  margin-bottom: 0.25rem;
+}
+
+.ticket-intro-quantity{
+  padding-top: 0.5rem;
+}
+
+.ticket-intro-quantity p{
+  font-size: 0.9rem;
+}
+
+.ticket-intro-quantity strong{
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+/* MESSAGE
+-------------------------------------------------- */
+.message{
+  padding: 1rem 2rem;
+  padding-bottom: 3rem;
+}
+
+.message textarea{
+  resize: none;
+}
+
+.message-title{
+  margin:0rem 0.5rem;
+}
+
+.message-title h1{
+  font-size:1.5rem
+}
+
+.message-main{
+  border:1px solid #e0e0e0; 
+  border-radius:5px; 
+  padding:1rem 3rem;
+  width:90%
+}
+
+.message-main-name p{
+  font-size:1.25rem
+}
 
 /* SHOPPING CART
 -------------------------------------------------- */
